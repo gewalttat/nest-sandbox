@@ -1,3 +1,4 @@
+import { RolesService } from './../roles/roles.service';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { Body, Controller, Get, Post } from '@nestjs/common';

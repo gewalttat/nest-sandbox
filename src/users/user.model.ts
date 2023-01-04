@@ -29,5 +29,5 @@ export class User extends Model<User, UserCreationAttrs> {
     banReason: string;
     /** decorator to many-to-many data model */
     @BelongsToMany(() => Role, () => UserRoles)
-    roles: [Role]
+    roles: Role[]
 }
