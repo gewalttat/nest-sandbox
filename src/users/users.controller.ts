@@ -1,7 +1,6 @@
 import { AddRoleDto } from './dto/add-role.dto';
 import { RolesGuard } from './../auth/roles.guard';
 import { JwtAuthGuard } from './../auth/jwt-auth-guard';
-import { RolesService } from './../roles/roles.service';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
@@ -40,7 +39,7 @@ export class UsersController {
     AddRole(@Body() dto: AddRoleDto) {
         return this.usersSevice.addRole(dto);
     }
-    /** add user role */
+    /** ban user */
     @ApiOperation({summary: 'Ban user'})
     @ApiResponse({status: 200})
     @Roles('ADMIN')
